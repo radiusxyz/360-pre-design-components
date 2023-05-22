@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "./Input";
+import InputSearch from "./InputSearch";
 import Table from "./Table";
+import FrequentTokens from "./FrequentTokens";
 
 type Props = {};
 
@@ -16,14 +17,23 @@ const TableWrapper = styled.div`
 `;
 
 const Bridge = styled.p`
-  text-decoration: underline;
   margin-top: 18px;
+  color: #a3a3a3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration-line: underline;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
-const Search = (props: Props) => {
+const Search: React.FC = (props: Props) => {
   return (
     <TableWrapper>
-      <Input />
+      <InputSearch />
+      <FrequentTokens />
       <Table />
       <Bridge>Bridge tokens to Polygon</Bridge>
     </TableWrapper>

@@ -25,7 +25,7 @@ const BalanceInUSD = styled.p`
   color: #000000;
 `;
 
-const TokenAmount = (props: Props) => {
+const TokenAmount: React.FC = (props: Props) => {
   return (
     <Wrapper>
       <Balance>15578352.121</Balance>

@@ -7,16 +7,16 @@ const Wrapper = styled.div`
   gap: 4px;
   flex-direction: column;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
 `;
 
 type Props = {};
 
-const Table = (props: Props) => {
+const Table: React.FC = (props: Props) => {
   return (
     <Wrapper>
-      {[1, 2, 3, 4, 5, 6].map((x) => (
-        <TableRow key={x} />
+      {["MATIC", "DAI", "WETH", "WMATIC", "ETH", "BTC"].map((x) => (
+        <TableRow key={x} title={x} />
       ))}
     </Wrapper>
   );

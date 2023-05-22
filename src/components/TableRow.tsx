@@ -7,14 +7,15 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background-color: #f1f1f1;
 `;
 
-type Props = {};
+type Props = { title: string };
 
-const TableRow = (props: Props) => {
+const TableRow: React.FC<Props> = (props: Props) => {
   return (
     <Wrapper>
-      <TokenDescription />
+      <TokenDescription title={props.title} />
       <TokenAmount />
     </Wrapper>
   );

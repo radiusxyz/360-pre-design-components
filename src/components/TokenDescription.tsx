@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-type Props = {};
+type Props = {
+  title: string;
+};
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,11 +19,11 @@ const Logo = styled.img`
 
 const Title = styled.p``;
 
-const TokenDescription = (props: Props) => {
+const TokenDescription: React.FC<Props> = (props: Props) => {
   return (
     <Wrapper>
       <Logo />
-      <Title>MATIC</Title>
+      <Title>{props.title}</Title>
     </Wrapper>
   );
 };

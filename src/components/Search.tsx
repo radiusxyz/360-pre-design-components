@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Input from "./Input";
-import TableRow from "./TableRow";
+import Table from "./Table";
 
 type Props = {};
 
@@ -24,7 +24,7 @@ const Search = (props: Props) => {
   return (
     <TableWrapper>
       <Input />
-      <TableRow />
+      <Table />
       <Bridge>Bridge tokens to Polygon</Bridge>
     </TableWrapper>
   );

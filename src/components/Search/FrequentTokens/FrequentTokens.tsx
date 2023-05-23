@@ -1,13 +1,5 @@
-import styled from "styled-components";
-import TokenDescription from "./TokenDescription";
-
-const Wrapper = styled.div`
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  margin-bottom: 41px;
-  width: 100%;
-`;
+import { Wrapper } from "./FrequentTokensStyles";
+import TokenDescription from "./TokenDescription/TokenDescription";
 
 type Props = {};
 

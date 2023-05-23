@@ -7,18 +7,43 @@ type Props = {};
 
 const ProgressBar = (props: Props) => {
   const [progress, setProgress] = useState(0);
+  const [progressReflections, setProgressReflections] = useState([
+    0, 0, 0, 0, 0,
+  ]);
+
+  const calculateWidths = (progress: number) => {
+    let leftCircle, leftLine, middleCircle, rightLine, rightCircle: number;
+    if (progress < 50) {
+      leftCircle = progress;
+      leftLine = progress * 2;
+      middleCircle = 0;
+      rightLine = 0;
+      rightCircle = 0;
+    } else {
+      leftCircle = progress;
+      leftLine = 100;
+      middleCircle = progress;
+      rightLine = (progress - 50) * 2;
+      rightCircle = 100;
+    }
+    return [leftCircle, leftLine, middleCircle, rightLine, rightCircle];
+  };
 
   useEffect(() => {
-    setProgress(100);
+    setProgress(30);
   }, []);
+
+  useEffect(() => {
+    setProgressReflections(() => calculateWidths(progress));
+  }, [progress]);
 
   return (
     <StyledProgressBar>
-      <Circle progress={progress} />
-      <Line progress={progress < 50 ? progress * 2 : 100} />
-      <Circle progress={progress >= 50 ? progress : undefined} />
-      <Line progress={progress >= 50 ? (progress - 50) * 2 : undefined} />
-      <Circle progress={progress == 100 ? progress : undefined} />
+      <Circle progress={progressReflections[0]} />
+      <Line progress={progressReflections[1]} />
+      <Circle progress={progressReflections[2]} />
+      <Line progress={progressReflections[3]} />
+      <Circle progress={progressReflections[4]} />
     </StyledProgressBar>
   );
 };

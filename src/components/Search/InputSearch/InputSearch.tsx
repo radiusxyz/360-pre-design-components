@@ -18,7 +18,7 @@ const InputSearch: React.FC<Props> = ({ handler }: Props) => {
           token.title.toLowerCase().includes(prompt.toLowerCase())
         )
       );
-    }, 500);
+    }, 300);
     return () => {
       clearTimeout(identifier);
     };

@@ -5,14 +5,11 @@ import { Token } from "../../../../assets/data";
 
 type Props = { token: Token };
 
-const TableRow: React.FC<Props> = (props: Props) => {
+const TableRow: React.FC<Props> = ({ token }: Props) => {
   return (
     <Wrapper>
-      <TokenDescription title={props.token.title} />
-      <TokenAmount
-        balance={props.token.balance}
-        balanceInUSD={props.token.balanceInUSD}
-      />
+      <TokenDescription title={token.title} />
+      <TokenAmount balance={token.balance} balanceInUSD={token.balanceInUSD} />
     </Wrapper>
   );
 };

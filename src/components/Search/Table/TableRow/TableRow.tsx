@@ -3,13 +3,16 @@ import { Wrapper } from "./TableRowStyles";
 import TokenAmount from "./TokenAmount/TokenAmount";
 import { Token } from "../../../../assets/data";
 
-type Props = Token;
+type Props = { token: Token };
 
 const TableRow: React.FC<Props> = (props: Props) => {
   return (
     <Wrapper>
-      <TokenDescription title={props.title} />
-      <TokenAmount balance={props.balance} balanceInUSD={props.balanceInUSD} />
+      <TokenDescription title={props.token.title} />
+      <TokenAmount
+        balance={props.token.balance}
+        balanceInUSD={props.token.balanceInUSD}
+      />
     </Wrapper>
   );
 };

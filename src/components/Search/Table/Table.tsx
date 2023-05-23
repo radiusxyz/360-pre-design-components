@@ -9,12 +9,7 @@ const Table: React.FC<Props> = (props: Props) => {
   return (
     <Wrapper>
       {props.tokens.map((token) => (
-        <TableRow
-          key={token.title}
-          title={token.title}
-          balance={token.balance}
-          balanceInUSD={token.balanceInUSD}
-        />
+        <TableRow key={token.title} token={token} />
       ))}
     </Wrapper>
   );

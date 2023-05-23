@@ -1,5 +1,6 @@
 import magnifier from "../assets/images/magnifier.png";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
@@ -35,13 +36,27 @@ const Search = styled.div`
   }
 `;
 
-const InputSearch: React.FC = (props: Props) => (
-  <Wrapper>
-    <Input placeholder="Which token would you like to swap?" />
-    <Search>
-      <img src={magnifier} alt="magnifier" />
-    </Search>
-  </Wrapper>
-);
+const InputSearch: React.FC = (props: Props) => {
+  const [enteredValue, setEnteredValue] = useState("");
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEnteredValue(e.target.value);
+  };
+
+  useEffect(() => {
+    console.log(enteredValue);
+  }, [enteredValue]);
+
+  return (
+    <Wrapper>
+      <Input
+        onChange={handleInput}
+        placeholder="Which token would you like to swap?"
+      />
+      <Search>
+        <img src={magnifier} alt="magnifier" />
+      </Search>
+    </Wrapper>
+  );
+};
 
 export default InputSearch;

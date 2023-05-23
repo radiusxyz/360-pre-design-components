@@ -12,12 +12,17 @@ const ProgressBar = (props: Props) => {
   );
 
   const handleProgress = (event: ChangeEvent<HTMLInputElement>) => {
-    if (isNaN(+event.target.value)) return;
-    setProgress(
-      (+event.target.value < 0 && 0) ||
-        (+event.target.value > 100 && 100) ||
-        +event.target.value
-    );
+    const val = +event.target.value;
+    if (isNaN(val)) return;
+    setProgress(() => {
+      if (val < 0) {
+        return 0;
+      } else if (val > 100) {
+        return 100;
+      } else {
+        return val;
+      }
+    });
   };
 
   function calculateWidths(progress: number) {
@@ -40,6 +45,7 @@ const ProgressBar = (props: Props) => {
 
   useEffect(() => {
     setProgressReflections(() => calculateWidths(progress));
+    console.log(progress);
   }, [progress]);
 
   return (

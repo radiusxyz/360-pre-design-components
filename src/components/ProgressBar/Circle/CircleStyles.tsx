@@ -6,7 +6,7 @@ type Props = {
 
 export const StyledCircle = styled.div<Props>`
   border-radius: 50%;
-  background-color: ${(props) => (props.progress && "blue") || "grey"};
-  width: 40px;
-  height: 40px;
+  background-color: ${(props) => (props.progress && "#8E8E8E") || "#D9D9D9"};
+  width: 20px;
+  height: 20px;
 `;

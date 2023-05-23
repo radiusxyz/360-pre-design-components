@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { StyledProgressBar } from "./StyledProgressBar";
 import Circle from "./Circle/Circle";
 import Line from "./Line/Line";
@@ -7,11 +7,20 @@ type Props = {};
 
 const ProgressBar = (props: Props) => {
   const [progress, setProgress] = useState(0);
-  const [progressReflections, setProgressReflections] = useState([
-    0, 0, 0, 0, 0,
-  ]);
+  const [progressReflections, setProgressReflections] = useState(
+    calculateWidths(progress)
+  );
 
-  const calculateWidths = (progress: number) => {
+  const handleProgress = (event: ChangeEvent<HTMLInputElement>) => {
+    if (isNaN(+event.target.value)) return;
+    setProgress(
+      (+event.target.value < 0 && 0) ||
+        (+event.target.value > 100 && 100) ||
+        +event.target.value
+    );
+  };
+
+  function calculateWidths(progress: number) {
     let leftCircle, leftLine, middleCircle, rightLine, rightCircle: number;
     if (progress < 50) {
       leftCircle = progress;
@@ -24,27 +33,32 @@ const ProgressBar = (props: Props) => {
       leftLine = 100;
       middleCircle = progress;
       rightLine = (progress - 50) * 2;
-      rightCircle = 100;
+      rightCircle = progress === 100 ? 100 : 0;
     }
-    return [leftCircle, leftLine, middleCircle, rightLine, rightCircle];
-  };
-
-  useEffect(() => {
-    setProgress(30);
-  }, []);
+    return { leftCircle, leftLine, middleCircle, rightLine, rightCircle };
+  }
 
   useEffect(() => {
     setProgressReflections(() => calculateWidths(progress));
   }, [progress]);
 
   return (
-    <StyledProgressBar>
-      <Circle progress={progressReflections[0]} />
-      <Line progress={progressReflections[1]} />
-      <Circle progress={progressReflections[2]} />
-      <Line progress={progressReflections[3]} />
-      <Circle progress={progressReflections[4]} />
-    </StyledProgressBar>
+    <>
+      <input
+        style={{ marginBottom: 50, height: 30, padding: 20, fontSize: 20 }}
+        placeholder="enter from 0 to 100"
+        onChange={handleProgress}
+        name="progress"
+        autoFocus
+      />
+      <StyledProgressBar>
+        <Circle progress={progressReflections.leftCircle} />
+        <Line progress={progressReflections.leftLine} />
+        <Circle progress={progressReflections.middleCircle} />
+        <Line progress={progressReflections.rightLine} />
+        <Circle progress={progressReflections.rightCircle} />
+      </StyledProgressBar>
+    </>
   );
 };
 

@@ -7,24 +7,17 @@ type Props = {};
 
 const ProgressBar = (props: Props) => {
   const [progress, setProgress] = useState(0);
-  const limit = 100;
-  //   useEffect(() => {
-  //     const identifier = setInterval(
-  //       () => setProgress((progress) => progress + 1),
-  //       500
-  //     );
 
-  //     return () => {
-  //       clearInterval(identifier);
-  //     };
-  //   }, [progress, limit]);
+  useEffect(() => {
+    setProgress(100);
+  }, []);
 
   return (
     <StyledProgressBar>
       <Circle progress={progress} />
-      <Line progress={progress} />
+      <Line progress={progress < 50 ? progress * 2 : 100} />
       <Circle progress={progress >= 50 ? progress : undefined} />
-      <Line progress={progress >= 50 ? progress : undefined} />
+      <Line progress={progress >= 50 ? (progress - 50) * 2 : undefined} />
       <Circle progress={progress == 100 ? progress : undefined} />
     </StyledProgressBar>
   );

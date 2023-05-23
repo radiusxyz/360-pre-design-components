@@ -7,9 +7,17 @@ type Props = {};
 
 const ProgressBar = (props: Props) => {
   const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    setInterval(() => setProgress(progress + 1), 1000);
-  }, []);
+  const limit = 100;
+  //   useEffect(() => {
+  //     const identifier = setInterval(
+  //       () => setProgress((progress) => progress + 1),
+  //       500
+  //     );
+
+  //     return () => {
+  //       clearInterval(identifier);
+  //     };
+  //   }, [progress, limit]);
 
   return (
     <StyledProgressBar>

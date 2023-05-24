@@ -1,10 +1,14 @@
 import React from "react";
-import { Wrapper } from "./ConfirmationInfoStyles";
+import { Wrapper, TransactionDetails } from "./ConfirmationInfoStyles";
 
 type Props = {};
 
 const ConfirmationInfo = (props: Props) => {
-  return <Wrapper />;
+  return (
+    <Wrapper>
+      <TransactionDetails />
+    </Wrapper>
+  );
 };
 
 export default ConfirmationInfo;

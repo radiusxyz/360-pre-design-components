@@ -1,7 +1,7 @@
-import TokenDescription from "../../FrequentTokens/TokenDescription/TokenDescription";
+import TokenDescription from "./TokenDescription";
 import { Wrapper } from "./TableRowStyles";
-import TokenAmount from "./TokenAmount/TokenAmount";
-import { Token } from "../../../../assets/data";
+import TokenAmount from "./TokenAmount";
+import { Token } from "../../assets/data";
 
 type Props = { token: Token };
 

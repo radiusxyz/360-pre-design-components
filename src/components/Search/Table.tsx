@@ -1,6 +1,6 @@
 import React from "react";
-import TableRow from "./TableRow/TableRow";
-import { Tokens } from "../../../assets/data";
+import TableRow from "./TableRow";
+import { Tokens } from "../../assets/data";
 import { Wrapper } from "./TableStyles";
 
 type Props = { tokens: Tokens };

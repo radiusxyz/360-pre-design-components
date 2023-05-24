@@ -1,6 +1,6 @@
-import magnifier from "../../../assets/images/magnifier.png";
+import magnifier from "../../assets/images/magnifier.png";
 import { useEffect, useState } from "react";
-import { Tokens, tokens } from "../../../assets/data";
+import { Tokens, tokens } from "../../assets/data";
 import { Input, Search, Wrapper } from "./InputSearchStyles";
 
 type Props = { handler: (handler: () => Tokens) => void };

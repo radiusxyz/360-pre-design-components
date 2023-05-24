@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyledProgressBar } from "./StyledProgressBar";
-import Circle from "./Circle/Circle";
-import Line from "./Line/Line";
+import Circle from "./Circle";
+import Line from "./Line";
 
 type Props = { status: number };
 

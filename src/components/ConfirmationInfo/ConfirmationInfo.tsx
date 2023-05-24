@@ -14,45 +14,65 @@ import {
 
 import exchange from "../../assets/images/exchange.png";
 
-type Props = {};
+// type Props = {
+//   from: { token: "MATIC"; amount: 0.225 };
+//   to: { token: "DAI"; amount: 0.225 };
+//   time: 60;
+//   fee: "No Fee";
+//   slippage: 0.01;
+//   extraProfit: 0.012;
+//   yourSave: 0.058;
+// };
 
-const ConfirmationInfo = (props: Props) => {
+type Props = {
+  details: {
+    from: { token: string; amount: number };
+    to: { token: string; amount: number };
+    time: 60;
+    fee: string;
+    slippage: number;
+    extraProfit: number;
+    yourSave: number;
+  };
+};
+
+const ConfirmationInfo: React.FC<Props> = ({ details }: Props) => {
   return (
     <Wrapper>
       <TokenPair>
         <Token>
           <TokenLogo />
-          <TokenDetails>0.225 MATIC</TokenDetails>
+          <TokenDetails>{`${details.from.amount} ${details.from.token}`}</TokenDetails>
         </Token>
         <ExchanceIcon>
           <img src={exchange} alt="exchange_icon" />
         </ExchanceIcon>
         <Token>
           <TokenLogo />
-          <TokenDetails>0.225 DAI</TokenDetails>
+          <TokenDetails>{`${details.to.amount} ${details.to.token}`}</TokenDetails>
         </Token>
       </TokenPair>
       <Divider />
       <TransactionDetails>
         <Column>
           <Header>Time</Header>
-          <Data>60sec</Data>
+          <Data>{details.time}sec</Data>
         </Column>
         <Column>
           <Header>Fee</Header>
-          <Data>No Fee</Data>
+          <Data>{details.fee}</Data>
         </Column>
         <Column>
           <Header>Slippage</Header>
-          <Data>0.01%</Data>
+          <Data>{details.slippage}%</Data>
         </Column>
         <Column>
           <Header>Extra profit</Header>
-          <Data>0.012 MATIC</Data>
+          <Data>{`${details.extraProfit} ${details.from.token}`}</Data>
         </Column>
         <Column>
           <Header>Your save</Header>
-          <Data>0.058 MATIC</Data>
+          <Data>{`${details.yourSave} ${details.from.token} `}</Data>
         </Column>
       </TransactionDetails>
     </Wrapper>

@@ -7,7 +7,10 @@ import "./index.css";
 function App() {
   return (
     <div className="App">
-      {/* <div className="progress" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+      <div
+        className="progress"
+        style={{ display: "flex", flexDirection: "column", gap: 20 }}
+      >
         <p style={{ textAlign: "center" }}>Start</p>
         <ProgressBar status={0} />
         <p style={{ textAlign: "center" }}>InProgress</p>
@@ -16,7 +19,7 @@ function App() {
         <ProgressBar status={2} />
         <p style={{ textAlign: "center" }}>Fail</p>
         <ProgressBar status={3} />
-      </div> */}
+      </div>
       <ConfirmationInfo
         details={{
           from: { token: "MATIC", amount: 0.225 },

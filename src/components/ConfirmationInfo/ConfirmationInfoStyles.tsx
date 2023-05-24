@@ -8,14 +8,19 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
+export const TokenPairWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 export const TokenPair = styled.div`
   display: flex;
-  margin-left: 330px;
-  margin-right: 330px;
   justify-content: space-between;
   align-items: center;
-  width: auto;
+  width: 100%;
   margin-bottom: 38px;
+  max-width: 311px;
 `;
 
 export const ExchanceIcon = styled.div``;

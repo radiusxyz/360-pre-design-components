@@ -7,5 +7,5 @@ type Props = {
 export const StyledLine = styled.div<Props>`
   background-color: ${(props) => (props.progress && "#8E8E8E") || "#D9D9D9"};
   height: 5px;
-  width: ${(props) => (props.progress ? `${props.progress}%` : "100%")};
+  width: 100%;
 `;

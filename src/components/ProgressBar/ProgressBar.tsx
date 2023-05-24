@@ -43,12 +43,8 @@ const ProgressBar = (props: Props) => {
     progressStates[status]
   );
 
-  const handleReflection = () => {
-    setProgressReflection(() => progressStates[status]);
-  };
-
   useEffect(() => {
-    handleReflection();
+    setProgressReflection(() => progressStates[status]);
   }, [status]);
 
   return (

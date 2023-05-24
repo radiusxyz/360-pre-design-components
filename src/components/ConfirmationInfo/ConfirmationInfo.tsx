@@ -9,6 +9,7 @@ import {
   Column,
   Header,
   Data,
+  ExchanceIcon,
 } from "./ConfirmationInfoStyles";
 
 import exchange from "../../assets/images/exchange.png";
@@ -23,7 +24,9 @@ const ConfirmationInfo = (props: Props) => {
           <TokenLogo />
           <TokenDetails>0.225 MATIC</TokenDetails>
         </Token>
-        <img src={exchange} alt="exchange_icon" />
+        <ExchanceIcon>
+          <img src={exchange} alt="exchange_icon" />
+        </ExchanceIcon>
         <Token>
           <TokenLogo />
           <TokenDetails>0.225 DAI</TokenDetails>

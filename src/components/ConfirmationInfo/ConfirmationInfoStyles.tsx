@@ -10,12 +10,15 @@ export const Wrapper = styled.div`
 
 export const TokenPair = styled.div`
   display: flex;
-  justify-content: center;
+  margin-left: 330px;
+  margin-right: 330px;
+  justify-content: space-between;
   align-items: center;
-  gap: 97px;
+  width: auto;
   margin-bottom: 38px;
-  overflow: hidden;
 `;
+
+export const ExchanceIcon = styled.div``;
 
 export const Token = styled.div`
   display: flex;
@@ -25,10 +28,9 @@ export const Token = styled.div`
 `;
 
 export const TokenLogo = styled.div`
-  max-width: 57px;
-  max-height: 57px;
-  width: 100%;
-  height: 100%;
+  width: 57px;
+  height: 57px;
+
   border-radius: 50%;
   background-color: #cacaca;
 `;
@@ -49,11 +51,12 @@ export const Divider = styled.div`
 `;
 
 export const TransactionDetails = styled.div`
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: start;
-  justify-content: center;
-  gap: 90px;
+  margin-left: 68px;
+  margin-right: 68px;
+  justify-content: space-between;
   overflow: hidden;
 `;
 

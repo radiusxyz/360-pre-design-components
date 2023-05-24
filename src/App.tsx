@@ -18,6 +18,24 @@ function App() {
         <ProgressBar status={3} />
       </div> */}
       <ConfirmationInfo />
+
+      {/* <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          minWidth: "auto",
+        }}
+      >
+        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
+          Hoihoihoi
+        </div>
+        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
+          Hihi
+        </div>
+        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
+          OiOi
+        </div>
+      </div> */}
     </div>
   );
 }

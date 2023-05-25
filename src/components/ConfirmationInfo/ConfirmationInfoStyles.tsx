@@ -8,25 +8,20 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
-export const TokenPairWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-
 export const TokenPair = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin-bottom: 38px;
-  max-width: 311px;
+  gap: 97px;
 `;
 
 export const ExchanceIcon = styled.div``;
 
 export const Token = styled.div`
   display: flex;
+  flex-shrink: 1;
   gap: 13px;
   flex-direction: column;
   align-items: center;
@@ -59,9 +54,7 @@ export const TransactionDetails = styled.div`
   width: auto;
   display: flex;
   align-items: start;
-  margin-left: 68px;
-  margin-right: 68px;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
 `;
 
@@ -69,7 +62,9 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-ff`;
+  align-items: center;
+  flex-grow: 1;
+`;
 
 export const Header = styled.p`
   font-weight: 500;

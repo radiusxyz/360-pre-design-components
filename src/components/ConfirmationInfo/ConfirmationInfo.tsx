@@ -10,26 +10,15 @@ import {
   Header,
   Data,
   ExchanceIcon,
-  TokenPairWrapper,
 } from "./ConfirmationInfoStyles";
 
 import exchange from "../../assets/images/exchange.png";
-
-// type Props = {
-//   from: { token: "MATIC"; amount: 0.225 };
-//   to: { token: "DAI"; amount: 0.225 };
-//   time: 60;
-//   fee: "No Fee";
-//   slippage: 0.01;
-//   extraProfit: 0.012;
-//   yourSave: 0.058;
-// };
 
 type Props = {
   details: {
     from: { token: string; amount: number };
     to: { token: string; amount: number };
-    time: 60;
+    time: number;
     fee: string;
     slippage: number;
     extraProfit: number;
@@ -40,21 +29,19 @@ type Props = {
 const ConfirmationInfo: React.FC<Props> = ({ details }: Props) => {
   return (
     <Wrapper>
-      <TokenPairWrapper>
-        <TokenPair>
-          <Token>
-            <TokenLogo />
-            <TokenDetails>{`${details.from.amount} ${details.from.token}`}</TokenDetails>
-          </Token>
-          <ExchanceIcon>
-            <img src={exchange} alt="exchange_icon" />
-          </ExchanceIcon>
-          <Token>
-            <TokenLogo />
-            <TokenDetails>{`${details.to.amount} ${details.to.token}`}</TokenDetails>
-          </Token>
-        </TokenPair>
-      </TokenPairWrapper>
+      <TokenPair>
+        <Token>
+          <TokenLogo />
+          <TokenDetails>{`${details.from.amount} ${details.from.token}`}</TokenDetails>
+        </Token>
+        <ExchanceIcon>
+          <img src={exchange} alt="exchange_icon" />
+        </ExchanceIcon>
+        <Token>
+          <TokenLogo />
+          <TokenDetails>{`${details.to.amount} ${details.to.token}`}</TokenDetails>
+        </Token>
+      </TokenPair>
       <Divider />
       <TransactionDetails>
         <Column>

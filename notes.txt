@@ -1,0 +1,2 @@
+It turns out that the size is borders with paddings, not with margin.
+So, basically, if you make a child component width 100% and give him some margin the child component will overflow the parent, because he has to have the same width as the parent's width.

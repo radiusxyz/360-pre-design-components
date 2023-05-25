@@ -15,16 +15,6 @@ import {
 
 import exchange from "../../assets/images/exchange.png";
 
-// type Props = {
-//   from: { token: "MATIC"; amount: 0.225 };
-//   to: { token: "DAI"; amount: 0.225 };
-//   time: 60;
-//   fee: "No Fee";
-//   slippage: 0.01;
-//   extraProfit: 0.012;
-//   yourSave: 0.058;
-// };
-
 type Props = {
   details: {
     from: { token: string; amount: number };

@@ -20,35 +20,6 @@ function App() {
         <p style={{ textAlign: "center" }}>Fail</p>
         <ProgressBar status={3} />
       </div>
-      <ConfirmationInfo
-        details={{
-          from: { token: "MATIC", amount: 0.225 },
-          to: { token: "DAI", amount: 0.225 },
-          time: 60,
-          fee: "No Fee",
-          slippage: 0.01,
-          extraProfit: 0.012,
-          yourSave: 0.058,
-        }}
-      />
-
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          minWidth: "auto",
-        }}
-      >
-        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
-          Hoihoihoi
-        </div>
-        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
-          Hihi
-        </div>
-        <div style={{ backgroundColor: "red", height: 50, width: "auto" }}>
-          OiOi
-        </div>
-      </div> */}
     </div>
   );
 }

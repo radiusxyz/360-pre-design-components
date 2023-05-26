@@ -9,7 +9,7 @@ export type Transaction = {
 };
 
 const transactions: Transaction[] = [
-  ...[...Array(500).keys()].map((i) => {
+  ...[...Array(20).keys()].map((i) => {
     return {
       date: new Date(Date.now()).toLocaleString(),
       from: { token: "ETH", amount: 300.58 },

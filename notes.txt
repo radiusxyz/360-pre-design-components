@@ -6,3 +6,5 @@ If you want to transition multiple properties in CSS, try this:
 .menu {
   transition: color 1s ease, margin 1s ease;
 }
+
+Analyzed which components are more performance efficient compared to others.

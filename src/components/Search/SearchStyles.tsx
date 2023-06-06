@@ -1,13 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TableWrapper = styled.div`
-  padding: 58px 44px 18px 44px;
   height: 581px;
-  width: 717px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9f9f9;
+  background: #ffffff;
+  border: 1px solid #dde0ff;
+  box-shadow: 0px 4px 21px rgba(90, 18, 61, 0.1);
+  border-radius: 4px;
 `;
 
 export const Bridge = styled.p`

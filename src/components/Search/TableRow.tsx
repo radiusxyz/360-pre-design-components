@@ -1,14 +1,19 @@
-import TokenDescription from "./TokenDescription";
-import { Wrapper } from "./TableRowStyles";
-import TokenAmount from "./TokenAmount";
-import { Token } from "../../assets/data";
+import TokenDescription from './TokenDescription';
+import { Wrapper } from './TableRowStyles';
+import TokenAmount from './TokenAmount';
+import { Token } from '../../assets/data';
+import styled from 'styled-components';
+import EnhancedTokenDescription from './EnhancedTokenDescription';
 
 type Props = { token: Token };
 
 const TableRow: React.FC<Props> = ({ token }: Props) => {
   return (
     <Wrapper>
-      <TokenDescription title={token.title} />
+      <EnhancedTokenDescription
+        title={token.title}
+        description={token.description}
+      />
       <TokenAmount balance={token.balance} balanceInUSD={token.balanceInUSD} />
     </Wrapper>
   );

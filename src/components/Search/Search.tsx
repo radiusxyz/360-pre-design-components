@@ -15,10 +15,8 @@ const Search: React.FC = () => {
   return (
     <TableWrapper>
       <InputSearch handler={handleTokensState} />
-
       <FrequentTokens />
       <Table tokens={tokensState} />
-      <Bridge>Bridge tokens to Polygon</Bridge>
     </TableWrapper>
   );
 };

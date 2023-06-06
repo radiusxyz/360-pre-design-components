@@ -7,5 +7,6 @@ export const Wrapper = styled.div`
   background: #ffffff;
   &: hover {
     background: #ededff;
+    cursor: pointer;
   }
 `;

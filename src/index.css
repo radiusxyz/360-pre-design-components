@@ -22,3 +22,21 @@ code {
 .App {
   padding: 50px;
 }
+
+.mother {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.c-1 {
+  background-color: brown;
+}
+.c-2 {
+  background-color: violet;
+  margin-left: 170px;
+}
+.c-3 {
+  background-color: orange;
+  margin-right: 170px;
+}

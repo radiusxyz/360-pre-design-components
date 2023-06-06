@@ -3,7 +3,7 @@ import InputSearch from './InputSearch';
 import Table from './Table';
 import FrequentTokens from './FrequentTokens';
 import { tokens, Tokens } from '../../assets/data';
-import { Bridge, TableWrapper } from './SearchStyles';
+import { TableWrapper } from './SearchStyles';
 
 const Search: React.FC = () => {
   const [tokensState, setTokensState] = useState(tokens);

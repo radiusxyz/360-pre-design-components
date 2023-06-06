@@ -1,8 +1,6 @@
-import TokenDescription from './TokenDescription';
 import { Wrapper } from './TableRowStyles';
 import TokenAmount from './TokenAmount';
 import { Token } from '../../assets/data';
-import styled from 'styled-components';
 import EnhancedTokenDescription from './EnhancedTokenDescription';
 
 type Props = { token: Token };

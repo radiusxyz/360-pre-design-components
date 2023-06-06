@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-y: scroll;
+  overflow: auto;
   border-top: 1px solid #dde0ff;
 
   &::-webkit-scrollbar {

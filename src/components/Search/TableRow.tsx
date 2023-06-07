@@ -1,4 +1,4 @@
-import { Wrapper } from './TableRowStyles';
+import { Wrapper } from './styles/TableRowStyles';
 import TokenAmount from './TokenAmount';
 import { Token } from '../../assets/data';
 import EnhancedTokenDescription from './EnhancedTokenDescription';

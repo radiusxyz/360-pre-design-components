@@ -3,7 +3,7 @@ import {
   Logo,
   Title,
   Wrapper,
-} from './EnhancedTokenDescriptionStyles';
+} from './styles/EnhancedTokenDescriptionStyles';
 
 type Props = { title: string; description: string };
 

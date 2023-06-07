@@ -1,4 +1,4 @@
-import { Logo, Title, Wrapper } from "./TokenDescriptionStyles";
+import { Logo, Title, Wrapper } from './styles/TokenDescriptionStyles';
 
 type Props = {
   title: string;

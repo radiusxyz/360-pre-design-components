@@ -1,7 +1,7 @@
 import magnifier from '../../assets/images/magnifier.png';
 import { useEffect, useState } from 'react';
 import { Tokens, tokens } from '../../assets/data';
-import { Input, Paddinger, Search, Wrapper } from './InputSearchStyles';
+import { Input, Paddinger, Search, Wrapper } from './styles/InputSearchStyles';
 
 type Props = { handler: (handler: () => Tokens) => void };
 

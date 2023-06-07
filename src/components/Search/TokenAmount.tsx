@@ -1,4 +1,4 @@
-import { Balance, BalanceInUSD, Wrapper } from "./TokenAmountStyles";
+import { Balance, BalanceInUSD, Wrapper } from './styles/TokenAmountStyles';
 
 type Props = { balance: number; balanceInUSD: number };
 

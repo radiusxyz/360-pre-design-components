@@ -1,4 +1,4 @@
-import { Wrapper } from './FrequentTokensStyles';
+import { Wrapper } from './styles/FrequentTokensStyles';
 import TokenDescription from './TokenDescription';
 
 type Props = {};

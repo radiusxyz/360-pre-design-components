@@ -1,0 +1,99 @@
+import { ReactNode } from 'react'
+import styled from 'styled-components/macro'
+
+type StyledButtonProps = {
+  display?: string
+  jc?: string
+  ai?: string
+  fd?: string
+  wrap?: string
+  gap?: string
+  rg?: string
+  cg?: string
+  pos?: string
+  br?: string
+  pddn?: string
+  pt?: string
+  pr?: string
+  pb?: string
+  pl?: string
+  mrgn?: string
+  mt?: string
+  mr?: string
+  mb?: string
+  ml?: string
+  bg?: string
+  h?: string
+  w?: string
+  border: string
+  maxW?: string
+  maxH?: string
+  minW?: string
+  minH?: string
+  fw?: string
+  fs?: string
+  lh?: string
+  fc?: string
+  disabled?: boolean
+  loading?: boolean
+  children: ReactNode
+}
+
+export const StyledButton = styled.button<StyledButtonProps>`
+  width: ${(props) => (props.w ? props.w : '100%')};
+  display: ${(props) => (props.display ? props.display : 'flex')};
+  justify-content: ${(props) => (props.jc ? props.jc : 'center')};
+  align-items: ${(props) => (props.ai ? props.ai : 'center')};
+  flex-wrap: ${(props) => (props.wrap ? props.wrap : 'nowrap')};
+  flex-direction: ${(props) => props.fd && props.fd};
+  gap: ${(props) => props.gap && props.gap};
+  row-gap: ${(props) => props.rg && props.rg};
+  column-gap: ${(props) => props.cg && props.cg};
+  position: ${(props) => props.pos && props.pos};
+  border-radius: ${(props) => props.br && props.br};
+  padding: ${(props) => props.pddn && props.pddn};
+  padding-top: ${(props) => props.pt && props.pt};
+  padding-right: ${(props) => props.pr && props.pr};
+  padding-bottom: ${(props) => props.pb && props.pb};
+  padding-left: ${(props) => props.pl && props.pl};
+  margin: ${(props) => props.mrgn && props.mrgn};
+  margin-top: ${(props) => props.mt && props.mt};
+  margin-right: ${(props) => props.mr && props.mr};
+  margin-bottom: ${(props) => props.mb && props.mb};
+  margin-left: ${(props) => props.ml && props.ml};
+  background-color: ${(props) => props.bg && props.bg};
+  height: ${(props) => props.h && props.h};
+  max-width: ${(props) => props.maxW && props.maxW};
+  max-height: ${(props) => props.maxH && props.maxH};
+  min-width: ${(props) => props.minW && props.minW};
+  min-height: ${(props) => props.minH && props.minH};
+  border: ${(props) => (props.border ? props.border : 'none')};
+  font-weight: ${(props) => (props.fw ? props.fw : '500')};
+  font-size: ${(props) => (props.fs ? props.fs : '18px')};
+  line-height: ${(props) => (props.lh ? props.lh : '26.01px')};
+  color: ${(props) => (props.fc ? props.fc : '#FFFFFF')};
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 50%;
+    cursor: auto;
+    pointer-events: none;
+  }
+`
+type Props = StyledButtonProps
+
+const Button = ({ children, disabled, loading, ...props }: Props) => {
+  return <StyledButton {...props}>{children}</StyledButton>
+}
+
+export default Button
